@@ -70,6 +70,6 @@
 @utility glass {
   background: var(--glass);
   color: var(--glass-foreground);
-  backdrop-filter: blur(18px) saturate(1.05);
+  backdrop-filter: blur(5px) saturate(0.7);
   border: 1px solid oklch(1 0.01 80 / 0.5);
 }
