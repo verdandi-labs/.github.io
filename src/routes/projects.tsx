@@ -34,8 +34,8 @@ function Projects() {
             </span>
           </div>
           <p className="mt-6 text-lg text-muted-foreground">
-            Helps you take your career transition seriously without burning
-            out in the process.
+            Helps you take your career transition seriously without burning out
+            in the process.
           </p>
         </article>
         <div className="glass flex min-h-64 items-center justify-center rounded-2xl border-dashed p-8 text-center text-lg font-light">
