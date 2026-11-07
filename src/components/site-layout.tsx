@@ -1,71 +1,76 @@
 import { type ReactNode } from "react";
 
+import backgroundImg from "../assets/background.webp";
+import logoImg from "../assets/logo.png";
+
+const navLinks = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Principles", href: "/principles" },
+  { label: "Projects", href: "/projects" },
+];
+
 export function SiteLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen overflow-x-hidden">
       <img
-        src="/background.webp"
+        src={backgroundImg}
         alt=""
-        width={1920}
-        height={1280}
         className="fixed inset-0 -z-10 h-full w-full object-cover"
       />
 
-      <div className="mx-auto max-w-6xl space-y-3 p-3 sm:space-y-4 sm:p-4">
-        <header className="flex items-center justify-between rounded-2xl bg-card px-5 py-4 sm:px-6">
-          <a href="/" className="flex items-center gap-3 text-lg">
-            <img
-              src="/logo.png"
-              alt="Verdandi Labs logo"
-              className="h-9 w-9 object-contain"
-            />
-            <span>
-              <em className="font-light">Verdandi</em>{" "}
-              <strong className="font-semibold">Labs</strong>
-            </span>
+      <div className="relative mx-auto flex min-h-screen w-full max-w-[1440px] flex-col px-6 pb-12 sm:px-8 lg:px-[25px] lg:pb-[45px]">
+        <header className="relative left-1/2 flex w-screen -translate-x-1/2 items-center justify-between px-[75px] pt-[2px] lg:pt-[32px]">
+          <a href="/" className="text-2xl text-white lg:text-[28px]">
+            <span className="font-light">Verdandi</span>{" "}
+            <span className="font-extrabold">Labs</span>
           </a>
-          <p className="hidden text-xs font-light text-muted-foreground sm:block">
-            Tools with a purpose
-          </p>
-          <nav className="hidden gap-8 text-sm sm:flex">
-            <a href="/" className="hover:opacity-60">
-              Home
-            </a>
-            <a href="/about" className="hover:opacity-60">
-              About
-            </a>
-            <a href="/principles" className="hover:opacity-60">
-              Principles
-            </a>
-            <a href="/projects" className="hover:opacity-60">
-              Projects
-            </a>
+          <nav className="hidden items-center gap-8 text-white sm:flex lg:h-[59px] lg:gap-[60px] lg:text-[21px]">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="font-extrabold hover:opacity-60"
+              >
+                {link.label}
+              </a>
+            ))}
           </nav>
         </header>
 
-        {children}
+        <main className="flex flex-1 flex-col">{children}</main>
 
-        <footer className="flex flex-col items-center justify-between gap-4 rounded-2xl bg-accent px-6 py-6 text-sm sm:flex-row">
-          <span>
-            <em className="font-light">Verdandi</em> <strong>Labs</strong>
-          </span>
-          <div className="flex gap-10">
-            <a
-              href="https://github.com/verdandi-labs"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:opacity-60"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://www.linkedin.com/in/anahi-amerise"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:opacity-60"
-            >
-              LinkedIn
-            </a>
+        <footer className="relative left-1/2 mt-auto w-screen -translate-x-1/2 px-[50px]">
+          <div className="relative flex h-[59px] items-center justify-between rounded-2xl bg-[#214D3A]/[0.63] px-5 sm:px-8">
+            <div className="relative flex items-center">
+              <span className="text-lg text-white lg:text-[19px]">
+                <span className="font-light">Verdandi</span>{" "}
+                <span className="font-extrabold">Labs</span>
+              </span>
+              <img
+                src={logoImg}
+                alt="Verdandi Labs"
+                className="absolute left-full top-1/2 -mt-[20px] ml-[10px] h-24 w-24 -translate-y-1/2 object-contain lg:h-[177px] lg:w-[177px]"
+              />
+            </div>
+            <div className="flex gap-8 text-white lg:gap-12 lg:text-[19px]">
+              <a
+                href="https://github.com/verdandi-labs"
+                target="_blank"
+                rel="noreferrer"
+                className="font-light hover:opacity-60"
+              >
+                GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/in/anahi-amerise"
+                target="_blank"
+                rel="noreferrer"
+                className="font-light hover:opacity-60"
+              >
+                LinkedIn
+              </a>
+            </div>
           </div>
         </footer>
       </div>

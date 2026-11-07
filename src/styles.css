@@ -2,10 +2,26 @@
 @source "../src";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: "Gilroy";
+  src: url("./assets/Gilroy-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("./assets/Gilroy-ExtraBold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-sans: "Urbanist", system-ui, sans-serif;
+  --font-sans: "Gilroy", sans-serif;
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   --radius-2xl: calc(var(--radius) + 8px);
@@ -64,6 +80,10 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
+    font-weight: 300;
+  }
+  h1, h2, h3, h4, h5, h6, strong, b {
+    font-weight: 800;
   }
 }
 
