@@ -16,7 +16,10 @@ export default defineConfig({
     tailwindcss(),
     tanstackStart({
       server: { entry: "server" },
-      prerender: { enabled: true },
+      prerender: {
+        enabled: true,
+        routes: ["/", "/about", "/principles", "/projects"],
+      },
     }),
     react(),
   ],

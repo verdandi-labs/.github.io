@@ -22,13 +22,13 @@ function About() {
       {/* The name */}
       <section
         id="name"
-        className="scroll-mt-4 rounded-2xl bg-card p-6 sm:p-10"
+        className="scroll-mt-4 rounded-2xl bg-[#F8AFA6]/20 p-6 text-white sm:p-8 lg:px-10 lg:py-[60px]"
       >
         <Label>The name</Label>
-        <h2 className="text-3xl font-bold sm:text-4xl">
-          The future starts <em className="font-normal">in the present</em>
+        <h2 className="text-3xl font-extrabold sm:text-4xl">
+          The future starts <em className="font-light">in the present</em>
         </h2>
-        <p className="mt-5 max-w-3xl text-muted-foreground">
+        <p className="mt-5 max-w-3xl text-white">
           In Norse mythology, Verdandi is one of the three Norns, associated
           with the present. The name represents a simple idea: the future is
           shaped by what we do today.
@@ -36,7 +36,7 @@ function About() {
       </section>
 
       {/* What we believe */}
-      <section className="glass rounded-2xl p-6 sm:p-10">
+      <section className="rounded-2xl bg-[#F8AFA6]/20 p-6 text-white sm:p-8 lg:px-10 lg:py-[60px]">
         <Label>What we believe</Label>
         <div className="grid gap-6 text-lg leading-relaxed font-light md:grid-cols-2">
           <p>

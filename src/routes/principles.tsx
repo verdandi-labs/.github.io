@@ -36,17 +36,17 @@ function Principles() {
     <SiteLayout>
       <section
         id="principles"
-        className="scroll-mt-4 rounded-2xl bg-card p-6 sm:p-10"
+        className="scroll-mt-4 rounded-2xl bg-[#F8AFA6]/20 p-6 text-white sm:p-8 lg:px-10 lg:py-[60px]"
       >
         <Label>Principles</Label>
-        <div className="grid md:grid-cols-3 md:divide-x">
+        <div className="grid md:grid-cols-3 md:divide-x md:divide-white/20">
           {principles.map((p) => (
             <div
               key={p.t}
-              className="border-b py-6 first:pt-0 last:border-0 md:border-b-0 md:px-6 md:py-0 md:first:pl-0"
+              className="border-b border-white/20 py-6 first:pt-0 last:border-0 md:border-b-0 md:px-6 md:py-0 md:first:pl-0"
             >
-              <h3 className="text-xl font-semibold">{p.t}</h3>
-              <p className="mt-2 text-muted-foreground">{p.d}</p>
+              <h3 className="text-xl font-extrabold">{p.t}</h3>
+              <p className="mt-2 text-white">{p.d}</p>
             </div>
           ))}
         </div>

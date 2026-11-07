@@ -30,7 +30,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               <a
                 key={link.href}
                 href={link.href}
-                className="font-extrabold hover:opacity-60"
+                className="font-extrabold transition-colors hover:text-[#debb47]"
               >
                 {link.label}
               </a>
