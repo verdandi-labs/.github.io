@@ -28,9 +28,12 @@ function Index() {
   return (
     <SiteLayout>
       <div className="flex flex-1 flex-col justify-center">
-        <section className="grid gap-[74px] md:grid-cols-2 lg:gap-[90px] lg:px-[20px]">
-          <div className="flex items-center rounded-2xl bg-[#F8AFA6]/20 p-6 text-left text-white sm:p-8 lg:px-10 lg:py-[60px]">
-            <h1 className="w-full text-[28px] leading-[1.1] font-light sm:text-[36px] lg:text-[50px]">
+        <section className="grid gap-[57px] md:grid-cols-2 lg:gap-[69px] lg:px-[15px]">
+          <div className="flex items-center rounded-2xl bg-[#F8AFA6]/20 p-[18px] text-left text-white sm:p-[25px] lg:px-[31px] lg:py-[46px]">
+            <h1
+              className="w-full leading-[1.1] font-light"
+              style={{ fontSize: "var(--text-hero)" }}
+            >
               <span className="font-extrabold">Creating</span>{" "}
               <span className="font-light">friendly & intentional</span>{" "}
               <span className="font-extrabold">software</span>{" "}
@@ -39,8 +42,11 @@ function Index() {
               </span>
             </h1>
           </div>
-          <div className="flex items-center rounded-2xl bg-[#F8AFA6]/20 p-6 text-right text-white sm:p-8 lg:px-10 lg:py-[60px]">
-            <h2 className="w-full text-[28px] leading-[1.1] font-light sm:text-[36px] lg:text-[50px]">
+          <div className="flex items-center rounded-2xl bg-[#F8AFA6]/20 p-[18px] text-right text-white sm:p-[25px] lg:px-[31px] lg:py-[46px]">
+            <h2
+              className="w-full leading-[1.1] font-light"
+              style={{ fontSize: "var(--text-hero)" }}
+            >
               Interested in the{" "}
               <span className="font-extrabold">possibilities</span> that emerge
               when we question the usual way of doing things

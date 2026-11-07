@@ -51,6 +51,11 @@
 
 :root {
   --radius: 1rem;
+  --text-hero: clamp(24px, 3.75vw, 54px);
+  --text-heading: clamp(16px, 2vw, 28px);
+  --text-body: clamp(12px, 1.1vw, 16px);
+  --text-label: clamp(10px, 0.9vw, 14px);
+  --text-nav: clamp(14px, 1.4vw, 20px);
   --background: oklch(0.96 0.02 80);
   --foreground: oklch(0.28 0.03 45);
   --card: oklch(0.98 0.012 78);

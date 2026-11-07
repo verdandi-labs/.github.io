@@ -21,25 +21,39 @@ function Projects() {
     <SiteLayout>
       <section
         id="projects"
-        className="grid scroll-mt-4 gap-8 pt-[50px] sm:gap-9 md:grid-cols-2"
+        className="grid scroll-mt-3 gap-[25px] pt-[39px] sm:gap-[28px] md:grid-cols-2"
       >
-        <article className="flex min-h-64 flex-col justify-between rounded-2xl bg-[#F8AFA6]/20 p-6 text-white backdrop-blur-[5px] backdrop-saturate-[0.7] sm:p-8">
-          <div className="flex items-start justify-between gap-4">
+        <article className="flex min-h-[197px] flex-col justify-between rounded-2xl bg-[#F8AFA6]/20 p-[18px] text-white backdrop-blur-[5px] backdrop-saturate-[0.7] sm:p-[25px]">
+          <div className="flex items-start justify-between gap-3">
             <div>
-              <h3 className="text-3xl font-extrabold">CareerBloom</h3>
+              <h3
+                className="font-extrabold"
+                style={{ fontSize: "var(--text-heading)" }}
+              >
+                CareerBloom
+              </h3>
             </div>
-            <span className="rounded-full bg-white/20 px-3 py-1 text-xs font-extrabold">
+            <span
+              className="rounded-full bg-white/20 px-2 py-[3px] font-extrabold"
+              style={{ fontSize: "var(--text-label)" }}
+            >
               Prototype
             </span>
           </div>
           <div className="flex-1 flex items-center justify-center">
-            <p className="text-[21px] text-white">
+            <p
+              className="text-white"
+              style={{ fontSize: "var(--text-body)" }}
+            >
               Helps you take your career transition seriously without burning out
               in the process
             </p>
           </div>
         </article>
-        <div className="flex min-h-64 items-center justify-center rounded-2xl border border-dashed border-white/40 bg-[#F8AFA6]/20 p-8 text-center text-[21px] font-light text-white">
+        <div
+          className="flex min-h-[197px] items-center justify-center rounded-2xl border border-dashed border-white/40 bg-[#F8AFA6]/20 p-[25px] text-center font-light text-white"
+          style={{ fontSize: "var(--text-body)" }}
+        >
           Something new is growing
         </div>
       </section>
