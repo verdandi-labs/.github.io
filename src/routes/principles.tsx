@@ -17,15 +17,32 @@ export const Route = createFileRoute("/principles")({
 
 const principles = [
   {
-    t: "Human-centred",
-    d: "We support people by being mindful of their needs and the many ways they navigate the world.",
+    title: [
+      { text: "Human", bold: true },
+      { text: "-centred", bold: false },
+    ],
+    d: "Not everyone experiences the world in the same way.\nMy aim is to create apps that adapt to different needs and perspectives.",
   },
   {
-    t: "Built with intention",
-    d: "Every decision should serve a purpose — useful features, thoughtful design, and simplicity where it matters.",
+    title: [
+      { text: "Built with ", bold: false },
+      { text: "intention", bold: true },
+    ],
+    d: (
+      <>
+        {
+          "Building software is about more than technical functionality.\nIt's about creating experiences that feel "
+        }
+        <strong>thoughtful, welcoming</strong>{" "}
+        <span className="font-light">and</span> <strong>supportive</strong>.
+      </>
+    ),
   },
   {
-    t: "Possibility through action",
+    title: [
+      { text: "Possibility ", bold: true },
+      { text: "through action", bold: false },
+    ],
     d: "Better solutions don't appear on their own; we experiment, learn, and build, one step at a time.",
   },
 ];
@@ -40,17 +57,24 @@ function Principles() {
         >
           {principles.map((p) => (
             <section
-              key={p.t}
+              key={p.title.map((s) => s.text).join("")}
               className="rounded-2xl bg-[#214D3A]/70 p-[18px] text-white sm:p-[25px] lg:px-[31px] lg:py-[46px]"
             >
               <h3
                 className="font-extrabold"
                 style={{ fontSize: "calc(var(--text-heading) - 4px)" }}
               >
-                {p.t}
+                {p.title.map((segment) => (
+                  <span
+                    key={segment.text}
+                    className={segment.bold ? undefined : "font-light"}
+                  >
+                    {segment.text}
+                  </span>
+                ))}
               </h3>
               <p
-                className="mt-1.5 text-white"
+                className="mt-[30px] whitespace-pre-line text-white"
                 style={{ fontSize: "var(--text-body)" }}
               >
                 {p.d}
