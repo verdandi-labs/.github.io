@@ -29,7 +29,7 @@ function Index() {
     <SiteLayout>
       <div className="flex flex-1 flex-col justify-center">
         <section className="grid gap-[57px] md:grid-cols-2 lg:gap-[69px] lg:px-[15px]">
-          <div className="flex items-center rounded-2xl bg-[#F8AFA6]/20 p-[18px] text-left text-white sm:p-[25px] lg:px-[31px] lg:py-[46px]">
+          <div className="flex items-center h-[150px] md:h-[300px] rounded-2xl bg-[#F8AFA6]/20 px-[28px] py-[18px] text-left text-white sm:px-[35px] sm:py-[25px] lg:px-[41px] lg:py-[46px]">
             <h1
               className="w-full leading-[1.1] font-light"
               style={{ fontSize: "var(--text-hero)" }}
@@ -42,7 +42,7 @@ function Index() {
               </span>
             </h1>
           </div>
-          <div className="flex items-center rounded-2xl bg-[#F8AFA6]/20 p-[18px] text-right text-white sm:p-[25px] lg:px-[31px] lg:py-[46px]">
+          <div className="flex items-center h-[150px] md:h-[300px] rounded-2xl bg-[#F8AFA6]/20 px-[28px] py-[18px] text-right text-white sm:px-[35px] sm:py-[25px] lg:px-[41px] lg:py-[46px]">
             <h2
               className="w-full leading-[1.1] font-light"
               style={{ fontSize: "var(--text-hero)" }}

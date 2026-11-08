@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import { Label } from "../components/label";
 import { SiteLayout } from "../components/site-layout";
 
 export const Route = createFileRoute("/principles")({
@@ -34,20 +33,19 @@ const principles = [
 function Principles() {
   return (
     <SiteLayout>
-      <section
-        id="principles"
-        className="scroll-mt-3 rounded-2xl bg-[#F8AFA6]/20 p-[18px] text-white sm:p-[25px] lg:px-[31px] lg:py-[46px]"
-      >
-        <Label>Principles</Label>
-        <div className="grid md:grid-cols-3 md:divide-x md:divide-white/20">
+      <div className="flex flex-1 flex-col justify-center">
+        <div
+          id="principles"
+          className="grid scroll-mt-3 gap-[20px] md:grid-cols-3 lg:px-[15px]"
+        >
           {principles.map((p) => (
-            <div
+            <section
               key={p.t}
-              className="border-b border-white/20 py-[18px] first:pt-0 last:border-0 md:border-b-0 md:px-[18px] md:py-0 md:first:pl-0"
+              className="rounded-2xl bg-[#214D3A]/70 p-[18px] text-white sm:p-[25px] lg:px-[31px] lg:py-[46px]"
             >
               <h3
                 className="font-extrabold"
-                style={{ fontSize: "var(--text-heading)" }}
+                style={{ fontSize: "calc(var(--text-heading) - 4px)" }}
               >
                 {p.t}
               </h3>
@@ -57,10 +55,10 @@ function Principles() {
               >
                 {p.d}
               </p>
-            </div>
+            </section>
           ))}
         </div>
-      </section>
+      </div>
     </SiteLayout>
   );
 }
