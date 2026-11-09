@@ -49,6 +49,12 @@ function Projects() {
               out in the process
             </p>
           </div>
+          <p
+            className="mt-3 text-white/70"
+            style={{ fontSize: "var(--text-label)" }}
+          >
+            Beta access via <span className="font-extrabold">GitHub</span>
+          </p>
         </article>
         <div
           className="flex min-h-[197px] items-center justify-center rounded-2xl border border-dashed border-white/40 bg-[#F8AFA6]/20 p-[25px] text-center font-light text-white"
