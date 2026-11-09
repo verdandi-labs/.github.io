@@ -21,7 +21,7 @@ const principles = [
       { text: "Human", bold: true },
       { text: "-centred", bold: false },
     ],
-    d: "Not everyone experiences the world in the same way.\nMy aim is to create apps that adapt to different needs and perspectives.",
+    d: "Technology informed by the diversity of human needs and perspectives, with a focus on creating meaningful experiences for the people who use it.",
   },
   {
     title: [
@@ -31,7 +31,7 @@ const principles = [
     d: (
       <>
         {
-          "Building software is about more than technical functionality.\nIt's about creating experiences that feel "
+          "Software is about more than technical functionality.\nIt's about creating experiences that feel "
         }
         <strong>thoughtful, welcoming</strong>{" "}
         <span className="font-light">and</span> <strong>supportive</strong>.
@@ -43,7 +43,7 @@ const principles = [
       { text: "Possibility ", bold: true },
       { text: "through action", bold: false },
     ],
-    d: "Better solutions don't appear on their own; we experiment, learn, and build, one step at a time.",
+    d: "Tools can empower people to move beyond limitations, explore possibilities and turn ideas into action.",
   },
 ];
 
