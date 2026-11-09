@@ -28,15 +28,7 @@ const principles = [
       { text: "Built with ", bold: false },
       { text: "intention", bold: true },
     ],
-    d: (
-      <>
-        {
-          "Software is about more than technical functionality.\nIt's about creating experiences that feel "
-        }
-        <strong>thoughtful, welcoming</strong>{" "}
-        <span className="font-light">and</span> <strong>supportive</strong>.
-      </>
-    ),
+    d: "Software is about more than technical functionality.\nIt's about creating experiences that feel thoughtful, welcoming and supportive.",
   },
   {
     title: [

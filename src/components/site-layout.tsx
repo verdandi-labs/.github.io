@@ -67,7 +67,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
                 target="_blank"
                 rel="noreferrer"
                 style={{ fontSize: "var(--text-nav)" }}
-                className="font-light hover:opacity-60"
+                className="font-light transition-colors hover:text-[#debb47]"
               >
                 GitHub
               </a>
@@ -76,7 +76,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
                 target="_blank"
                 rel="noreferrer"
                 style={{ fontSize: "var(--text-nav)" }}
-                className="font-light hover:opacity-60"
+                className="font-light transition-colors hover:text-[#debb47]"
               >
                 LinkedIn
               </a>

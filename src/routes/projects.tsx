@@ -33,20 +33,20 @@ function Projects() {
                 CareerBloom
               </h3>
             </div>
-            <span
-              className="rounded-full bg-white/20 px-2 py-[3px] font-extrabold"
+            <a
+              href="https://careerbloom-e5ne.onrender.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full bg-[#214D3A] px-2 py-[3px] font-extrabold transition-colors hover:bg-[#214D3A]/80"
               style={{ fontSize: "var(--text-label)" }}
             >
               Prototype
-            </span>
+            </a>
           </div>
           <div className="flex-1 flex items-center justify-center">
-            <p
-              className="text-white"
-              style={{ fontSize: "var(--text-body)" }}
-            >
-              Helps you take your career transition seriously without burning out
-              in the process
+            <p className="text-white" style={{ fontSize: "var(--text-body)" }}>
+              Helps you take your career transition seriously without burning
+              out in the process
             </p>
           </div>
         </article>
