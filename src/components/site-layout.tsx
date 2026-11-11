@@ -1,4 +1,5 @@
-import { type ReactNode } from "react";
+import { type ReactNode, useEffect, useRef, useState } from "react";
+import { Menu, X } from "lucide-react";
 
 import backgroundImg from "../assets/background.webp";
 import logoImg from "../assets/logo.png";
@@ -11,6 +12,39 @@ const navLinks = [
 ];
 
 export function SiteLayout({ children }: { children: ReactNode }) {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const mobileMenuButtonRef = useRef<HTMLButtonElement>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+
+    const handlePointerDown = (event: PointerEvent) => {
+      const target = event.target as Node;
+      if (
+        mobileMenuRef.current?.contains(target) ||
+        mobileMenuButtonRef.current?.contains(target)
+      ) {
+        return;
+      }
+      setIsMobileMenuOpen(false);
+    };
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsMobileMenuOpen(false);
+        mobileMenuButtonRef.current?.focus();
+      }
+    };
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <div className="relative min-h-screen overflow-x-hidden">
       <img
@@ -41,6 +75,49 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               </a>
             ))}
           </nav>
+          <button
+            ref={mobileMenuButtonRef}
+            type="button"
+            className="flex h-9 w-9 items-center justify-center rounded-md text-white transition-colors hover:text-[#debb47] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 sm:hidden"
+            aria-label={
+              isMobileMenuOpen
+                ? "Close navigation menu"
+                : "Open navigation menu"
+            }
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-navigation"
+            onClick={() => setIsMobileMenuOpen((open) => !open)}
+          >
+            {isMobileMenuOpen ? (
+              <X className="h-6 w-6" aria-hidden="true" />
+            ) : (
+              <Menu className="h-6 w-6" aria-hidden="true" />
+            )}
+          </button>
+          {isMobileMenuOpen && (
+            <div
+              id="mobile-navigation"
+              ref={mobileMenuRef}
+              className="absolute inset-x-[58px] top-full z-20 mt-2 max-h-[calc(100dvh-120px)] overflow-y-auto rounded-2xl bg-[#214D3A]/[0.63] backdrop-blur-sm sm:hidden"
+            >
+              <nav
+                aria-label="Mobile"
+                className="flex flex-col px-[24px] py-[10px]"
+              >
+                {navLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    style={{ fontSize: "var(--text-nav)" }}
+                    className="py-[10px] font-extrabold text-white transition-colors hover:text-[#debb47]"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </nav>
+            </div>
+          )}
         </header>
 
         <main className="flex flex-1 flex-col">{children}</main>
